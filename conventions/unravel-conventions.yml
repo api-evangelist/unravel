@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unraveldata.com/unravel-v482x/en/on-prem-apis.html
+authentication:
+  style: api-token
+  header: 'Authorization: JWT <token>'
+  notes: API tokens are created by an administrator in the Unravel UI and sent in
+    the Authorization header with a JWT prefix. See
+    authentication/unravel-authentication.yml.
+base_url:
+  pattern: http(s)://<unravel-host>:3000/api/v1
+  notes: The REST API is served by each customer's Unravel instance on port 3000;
+    documented examples use http://myserver.unraveldata.com:3000/api/v1. There is
+    no single public cloud API host.
+media_types:
+  request: application/json
+  response: application/json
+  notes: JSON is used for the query format made with POST requests; responses
+    contain a metadata section and a results section.
+versioning:
+  style: uri-path
+  current: v1
+  evidence: All documented endpoints are rooted at /api/v1.
+pagination:
+  style: offset
+  params: [from, size]
+  notes: POST /apps/search documents from (set to 0) and size (default 15) request
+    fields for windowing results.
+time_ranges:
+  format: yyyy-mm-ddThh:mm:ss+offset (ISO 8601 with UTC offset)
+  params: [start_time, end_time]
+idempotency:
+  supported: null
+  notes: No idempotency-key mechanism is documented for the Unravel REST APIs.
+request_tracing:
+  notes: No request-id tracing header is documented.
+rate_limits:
+  notes: No API rate limiting is documented for the Unravel REST APIs.
+error_envelope:
+  notes: No structured error catalog or problem+json envelope is documented in the
+    public REST API reference.
+cross_links:
+  authentication: authentication/unravel-authentication.yml
+  lifecycle: lifecycle/unravel-lifecycle.yml
+  changelog: changelog/unravel-changelog.yml

@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unraveldata.com/unravel-v482x/en/rn-4827.html
+scheme: product-release-train (4.<major>.<minor>.<patch>)
+current_version: 4.8.2.8
+entries:
+  - version: 4.8.2.8
+    date: 2026-01
+    url: https://docs.unraveldata.com/unravel-v482x/en/rn-4828-bigquery.html
+    certified_platforms: [BigQuery]
+    breaking: false
+    highlights:
+      - Role-based access control (RBAC) for BigQuery — administrators can create
+        users and roles and map users to roles.
+      - App Store — task option uploads enabled and filtering support added for
+        tasks in the App Store admin listing and the Apps page.
+  - version: 4.8.2.7
+    date: 2025-09
+    url: https://docs.unraveldata.com/unravel-v482x/en/rn-4827.html
+    certified_platforms: [Google Cloud Platform (GCP) - BigQuery]
+    breaking: false
+    highlights:
+      - Data de-identification support for BigQuery queries (PII masking via Google
+        Sensitive Data Protection).
+      - Centralized polling for BigQuery jobs from a single designated project.
+      - Estimated savings in newly generated insights, based on slot-ms and billed
+        bytes.
+      - Improved backend performance and stability of pipeline components.
+      - New App Store apps — Top Similar Tables by Estimated Savings, App Run
+        Scheduler.
+notes: Release notes are published per release in the versioned docs (Release Notes
+  section of the 4.8.2.x documentation). Recent window only; the live docs are the
+  source of truth.

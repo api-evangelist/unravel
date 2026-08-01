@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://www.unraveldata.com and https://docs.unraveldata.com
+notes: No /.well-known/ discovery documents are published on either host. The website
+  does publish /llms.txt at the root (captured verbatim in llms/unravel-llms.txt).
+hosts:
+  - host: https://www.unraveldata.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /security.txt
+        status: 404
+      - path: /llms.txt
+        status: 200
+        file: ../llms/unravel-llms.txt
+  - host: https://docs.unraveldata.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404

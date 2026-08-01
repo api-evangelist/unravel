@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unraveldata.com/unravel-v482x/en/api-token.html
+docs: https://docs.unraveldata.com/unravel-v482x/en/api-token.html
+summary:
+  types: [apiKey]
+  model: api-token
+  notes: Unravel's REST APIs are authorized with API tokens. An administrator creates
+    tokens from the Unravel UI (Manage > API Tokens) with a Client Id and a role
+    (Admin or User; User tokens can carry RBAC tags). Tokens are backed by a JSON
+    web token (JWT) secret that can be rotated. By default tokens are deleted when
+    the Unravel server restarts; persistent tokens require setting the
+    com.unraveldata.api.access.tokens.store property to a JSON token store file.
+schemes:
+  - name: apiToken
+    type: apiKey
+    in: header
+    header: 'Authorization: JWT <token>'
+    description: >-
+      API authorization token created in the Unravel UI, required while
+      interacting with Unravel APIs. Requests send the token in an Authorization
+      header with the JWT prefix (documented request examples use
+      -H "Authorization: JWT <token>"). Roles are Admin or User; User tokens can
+      be scoped with RBAC tags.
+    roles: [Admin, User]
+    persistence: Deleted on server restart unless com.unraveldata.api.access.tokens.store
+      is configured to a persistent JSON token store.
+    jwt_secret_rotation: https://docs.unraveldata.com/unravel-v482x/en/jwt-rotate.html
+ui_authentication:
+  - LDAP (Enabling LDAP authentication for Unravel UI)
+  - SAML (Enabling SAML Authentication for Unravel User; Azure AD, Okta via Auth0)
+  - Kerberos (Configuring Kerberos for secure cluster access)
+  - Role-Based Access Control (RBAC) with role types and user tags
+notes: Unravel is a self-hosted / SaaS data observability platform; the REST API is
+  served by the customer's Unravel instance rather than a single public cloud host.

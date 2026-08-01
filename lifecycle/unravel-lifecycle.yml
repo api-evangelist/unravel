@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unraveldata.com/unravel-v482x/en/
+versioning:
+  scheme: product-release-train
+  pattern: 4.<major>.<minor>.<patch> (e.g. 4.8.2.7)
+  current_line: 4.8.2.x
+  docs: https://docs.unraveldata.com/unravel-v482x/en/
+  notes: Documentation is versioned per release line (unravel-v482x covers 4.8.2.0
+    for GCP-BigQuery and Snowflake; 4.8.1.x covers GCP-BigQuery). Release notes run
+    through 4.8.2.7 (Oct 2025) and a January 2026 BigQuery release (4.8.2.8).
+release_notes: https://docs.unraveldata.com/unravel-v482x/en/rn-4827.html
+downloads:
+  docs: Downloads section lists Unravel 4.8 builds (4.8.2.5-H, 4.8.2.5, 4.8.2.4,
+    4.8.2.2, 4.8.2.1, 4.8.2.0, 4.8.1.0) with documented upgrade paths.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No public API deprecation policy or RFC 8594 Sunset/Deprecation header
+    support is documented. Older REST API doc trees (docs.unraveldata.com/en/api.html
+    and unravel-v462x) have been removed (HTTP 404); the current API reference lives
+    under the versioned 4.8.2.x docs.
+sla: null
+status_page: null
+deprecated_operations: []

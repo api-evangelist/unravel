@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unraveldata.com/unravel-v482x/en/quick-ref-manager-commands.html
+name: manager
+kind: admin-cli
+description: First-party command-line tool shipped with every Unravel installation
+  for operating and configuring the platform. Run as <Unravel installation
+  directory>/manager <command> (for example /opt/unravel/manager start). This is an
+  operations/administration CLI for the self-hosted product rather than a hosted
+  developer-API CLI.
+install:
+  - method: bundled
+    detail: Installed with Unravel under the installation directory (e.g.
+      /opt/unravel/manager).
+commands:
+  - group: Main actions
+    commands:
+      - {name: start, description: Start Unravel}
+      - {name: stop, description: Stop Unravel}
+      - {name: restart, description: Restart Unravel}
+      - {name: report, description: Report Unravel services}
+      - {name: watch, description: Report Unravel services, refreshing every two seconds}
+      - {name: service, description: Additional service management commands}
+      - {name: config, description: Configure Unravel}
+      - {name: refresh, description: Refresh scripts and configurations}
+      - {name: activate, description: Activate an Unravel version}
+      - {name: version, description: Unravel version information}
+      - {name: precheck, description: Verify the system configuration supports the running Unravel}
+      - {name: healthcheck, description: Verify the health of an Unravel installation}
+      - {name: run, description: Run Unravel scripts}
+      - {name: api, description: Unravel API tools}
+  - group: BigQuery
+    commands:
+      - {name: config bigquery enable/disable, description: Enable or disable BigQuery support}
+      - {name: config bigquery set-polling, description: Set the polling time to pull data from BigQuery}
+      - {name: config bigquery show, description: Display the current BigQuery configuration}
+      - {name: config bigquery add, description: Add BigQuery project(s) for monitoring (single or --batch, customer-supplied or Unravel-managed credentials)}
+      - {name: config bigquery set-lr-endpoint, description: Set the Log Receiver endpoint for BigQuery projects}
+      - {name: config bigquery integrate, description: Integrate BigQuery projects (optionally --skip-authorization)}
+key_flows:
+  - Start/stop/restart and health of the Unravel services (start, stop, report, healthcheck).
+  - Configuration management via manager config properties set / config apply
+    (e.g. com.unraveldata.api.access.tokens.store for persistent API tokens).
+  - Onboarding BigQuery projects for monitoring.

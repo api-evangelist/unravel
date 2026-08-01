@@ -1,7 +1,26 @@
 aid: unravel
 name: Unravel
-description: Unravel is a company surfaced as a portfolio company of menlo-ventures and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Unravel is an AI-powered data observability and FinOps platform that helps
+  data teams optimize performance, control costs, and troubleshoot data
+  pipelines across Databricks, Snowflake, Google BigQuery, Amazon EMR, and
+  Cloudera. Each Unravel instance exposes REST APIs for application
+  performance data, cluster operations and resource metrics, chargeback
+  reporting, anomaly detection, and pipeline monitoring, authorized with API
+  tokens created in the Unravel UI.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/69c4c9c7f795b263782ef5be/69c628dd2000dd75fce9d09d_b88c9b1de08c1a38c2ab3fd25b02793e_un-logo-white.svg
 url: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +30,41 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 tags:
+- Data Observability
+- FinOps
+- DataOps
+- Cost Optimization
+- Databricks
+- Snowflake
+- BigQuery
+- Monitoring
 - Company
-apis: []
+apis:
+- name: Unravel REST API
+  description: >-
+    REST APIs for querying and collecting data from an Unravel instance —
+    application details, recommendations and logs, apps search, cluster
+    operations and resource metrics, chargeback reports, queue analysis,
+    anomaly detection, and pipeline monitoring. Requests and responses are
+    JSON, authorized with an API token sent in an Authorization JWT header.
+  humanURL: https://docs.unraveldata.com/unravel-v482x/en/on-prem-apis.html
+  baseURL: https://myserver.unraveldata.com:3000/api/v1
+  tags:
+  - Observability
+  - Monitoring
+  - FinOps
+  properties:
+  - type: APIReference
+    url: https://docs.unraveldata.com/unravel-v482x/en/on-prem-apis.html
+  - type: Documentation
+    url: https://docs.unraveldata.com/unravel-v482x/en/api-token.html
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +73,37 @@ maintainers:
 common:
 - type: Website
   url: https://unraveldata.com
+- type: Documentation
+  url: https://docs.unraveldata.com
+- type: GettingStarted
+  url: https://docs.unraveldata.com/unravel-v482x/en/unravel-for-bigquery-setup-guide.html
+- type: Blog
+  url: https://www.unraveldata.com/resources
+- type: Support
+  url: https://www.unraveldata.com/company/contact-us
+- type: Pricing
+  url: https://www.unraveldata.com/platform/pricing-options
+- type: Login
+  url: https://customers.unraveldata.com/login
+- type: TermsOfService
+  url: https://www.unraveldata.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.unraveldata.com/privacy-policy
+- type: TrustCenter
+  url: security/unravel-trust-center.yml
+- type: Compliance
+  url: https://trust.unraveldata.com/
+- type: DomainSecurity
+  url: security/unravel-domain-security.yml
+- type: Authentication
+  url: authentication/unravel-authentication.yml
+- type: Conventions
+  url: conventions/unravel-conventions.yml
+- type: ChangeLog
+  url: changelog/unravel-changelog.yml
+- type: Lifecycle
+  url: lifecycle/unravel-lifecycle.yml
+- type: CLI
+  url: cli/unravel-cli.yml
+- type: LLMsTxt
+  url: llms/unravel-llms.txt
