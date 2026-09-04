@@ -21,15 +21,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://cdn.prod.website-files.com/69c4c9c7f795b263782ef5be/69c628dd2000dd75fce9d09d_b88c9b1de08c1a38c2ab3fd25b02793e_un-logo-white.svg
 url: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/apis.yml
