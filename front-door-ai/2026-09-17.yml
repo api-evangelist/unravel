@@ -7,14 +7,17 @@ front_door_ai:
   probed_at: '2026-09-17'
   host: unraveldata.com
   final_host: www.unraveldata.com
-  ownership: inherited
+  ownership: own
   owner: unravel
   shares_host_with: null
-  inherited_from: www.unraveldata.com
+  inherited_from: null
+  alias_of: www.unraveldata.com
   verdict: scored
-  score: null
+  score: 26
+  band: 6
+  band_label: dominant
   host_score: 26
-  density: null
+  density: 9.43
   words: 2756
   tiers:
     agentic: 1
